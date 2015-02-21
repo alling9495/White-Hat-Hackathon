@@ -6,6 +6,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'WHH.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', 'game.views.home', name='home'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^game/', include('game.urls')),
 )

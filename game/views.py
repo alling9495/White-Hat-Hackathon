@@ -5,3 +5,8 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse("Hello world!")
+
+def home(request):
+    page = HttpResponse('== OUR COOL WEB PAGE ==<br><br>\
+    See more at <a href="https://www.duckduckgo.com">Google.com</a>')
+    return page
