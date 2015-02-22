@@ -10,4 +10,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^game/', include('game.urls')),
     url(r'^login/', 'auth.views.login_user'),
+    url(r'^2fa/', include('two_factor.urls', 'two_factor')),
+    url(r'^accounts/profile/', include('game.urls')),
 )
