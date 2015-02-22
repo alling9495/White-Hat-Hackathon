@@ -13,15 +13,16 @@ body{
 <body>
 	{{ state }}
 	<form action="/login/" method="post">
-		{% if next %}
-		<input type="hidden" name="next" value="{{ next }}" />
-		{% endif %}
-		username:
-		<input type="text" name="username" value="{{ username}}" /><br />
-		password:
-		<input type="password" name="password" value="" /><br />
+            {% csrf_token %}
+            {% if next %}
+            <input type="hidden" name="next" value="{{ next }}" />
+            {% endif %}
+            username:
+            <input type="text" name="username" value="{{ username}}" /><br />
+            password:
+            <input type="password" name="password" value="" /><br />
 
-		<input type="submit" value="Log In" />
+            <input type="submit" value="Log In" />
 	</form>
 </body>
 </html>
